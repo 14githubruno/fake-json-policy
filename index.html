@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Fetch Sample</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="https://jsonplaceholder.typicode.com/" target="_blank"
+        >JSONPlaceholder</a
+      >
+    </header>
+    <main>
+      <!-- welcome -->
+      <section class="welcome">
+        <h1>Transparency is our policy</h1>
+        <h2>Taste it</h2>
+      </section>
+      <!-- container input output title -->
+      <section class="container-input-output-title">
+        <h3 class="input-title">scrutinise of our customers</h3>
+        <h3 class="output-title">result</h3>
+        <!-- (button next to 'result' title) -->
+        <button class="clear-button hidden">{clear}</button>
+      </section>
+      <!-- container input output -->
+      <section class="container-input-output">
+        <div class="input">
+          <button class="username-btn">username</button>
+          <button class="email-btn">e-mail</button>
+          <button class="phone-btn">phone number</button>
+          <button class="address-btn">address</button>
+          <button class="total-btn">full-stack</button>
+        </div>
+        <!-- (<h3>result</h3> and <button>clear<button> for mobile)  -->
+        <div class="container-title-button-mobile">
+          <h3 class="output-title-mobile">result</h3>
+          <button class="clear-button-mobile hidden">{clear}</button>
+        </div>
+        <!--  -->
+        <div class="output">
+          <div class="user-choice-container">
+            <!-- here will go the p with the user's choice -->
+            <p>Data will be displayed here</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a href="https://github.com/14githubruno" target="_blank">Github</a>
+      <a class="go-top">top</a>
+    </footer>
+    <!-- js -->
+    <script src="./src/main.js"></script>
+  </body>
+</html>

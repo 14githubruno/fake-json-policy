@@ -1,0 +1,285 @@
+/* resets/base/font */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+  background-color: #20b172;
+  width: 100%;
+  max-width: 180em;
+  min-width: 32em;
+}
+
+a {
+  color: black;
+  font-size: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9aea9a;
+  border: 0.1rem solid #000000;
+  box-shadow: inset 0 0 0.5rem #013f01;
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #262626;
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* header */
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* main (welcome) */
+.welcome {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.welcome h1 {
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+.welcome h2 {
+  font-size: 2.5rem;
+  margin-bottom: 12rem;
+}
+
+.welcome h2::after {
+  content: "";
+  background: url(../icons/candy-cane.svg) no-repeat;
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  position: relative;
+  left: 0.8rem;
+  top: 0.8rem;
+}
+
+.welcome h2::before {
+  content: "";
+  background: url(../icons/pizza-slice.svg) no-repeat;
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  position: relative;
+  right: 0.7rem;
+  bottom: 0.7rem;
+}
+
+/* main (container input output title button) + (output title button mobile) */
+.container-input-output-title {
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.input-title,
+.output-title,
+.output-title-mobile {
+  flex-basis: 50%;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.output-title,
+.clear-button {
+  display: none;
+}
+
+.clear-button {
+  position: absolute;
+  right: 0;
+}
+
+.container-title-button-mobile {
+  margin: 3rem 0;
+  position: relative;
+}
+
+.clear-button-mobile {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.clear-button,
+.clear-button-mobile {
+  border: none;
+  background: transparent;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+/* main (container input output) */
+.container-input-output {
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12rem;
+}
+
+/* ((input)) */
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.input button {
+  cursor: pointer;
+  width: 37%;
+  max-width: 31rem;
+  height: 5.5rem;
+  margin-bottom: 0.6rem;
+  border: 0.1rem solid #000000;
+  border-radius: 1.6rem;
+  background-color: #b8f6b8;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.input button:hover,
+.input button:active {
+  background-color: #a7f7a7;
+}
+
+/* ((output)) */
+.output {
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.output p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 1rem 4rem 1rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
+/* footer */
+footer {
+  width: 96%;
+  margin-left: 2%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+footer .go-top {
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+  font-size: 2.3rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(175, 255, 175);
+}
+
+/*js class  */
+.hidden {
+  display: none;
+}
+
+/* mediaqueries */
+@media (min-width: 32em) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 60em) {
+  /* welcome section */
+  .welcome h2 {
+    margin-bottom: 0;
+  }
+
+  /* input-output title */
+  .container-input-output-title {
+    justify-content: flex-start;
+  }
+
+  .output-title,
+  .clear-button {
+    display: initial;
+  }
+
+  /* container title-button for mobile or smaller screens */
+  .container-title-button-mobile {
+    display: none;
+  }
+
+  /* input-output */
+  .container-input-output {
+    height: 35rem;
+    flex-direction: row;
+  }
+
+  .output {
+    flex-basis: 50%;
+    border-left: 0.1rem solid black;
+    justify-content: flex-start;
+  }
+
+  .input {
+    flex-basis: 50%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  /* anchor-top */
+  .go-top {
+    display: none;
+  }
+
+  /*js class  */
+  .hidden {
+    display: none;
+  }
+}
